@@ -8,7 +8,17 @@
     35729
   ],
   "extensions": [
-    "editorconfig.editorconfig",
-  ],
-  "postCreateCommand": "bash .devcontainer/spfx-setup.sh"
+	"editorconfig.editorconfig",
+],
+"postCreateCommand": "bash .devcontainer/spfx-setup.sh",
+"build": {
+	"dockerfile": "Dockerfile",
+	"args": {
+		"VARIANT": "12-bullseye"
+	}
+},
+"runArgs": [
+	"--init"
+],
+"remoteUser": "node"
 }
