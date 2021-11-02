@@ -1,5 +1,14 @@
 {
   "name":"SPFx",
+  "runArgs": [
+    "--init"
+  ],
+  "build": {
+    "dockerfile": "Dockerfile",
+    "args": {
+      "VARIANT": "12-bullseye"
+    }
+  },  
   "settings":{
   },
   "forwardPorts": [
@@ -11,14 +20,5 @@
 	"editorconfig.editorconfig",
 ],
 "postCreateCommand": "bash .devcontainer/spfx-setup.sh",
-"build": {
-	"dockerfile": "Dockerfile",
-	"args": {
-		"VARIANT": "12-bullseye"
-	}
-},
-"runArgs": [
-	"--init"
-],
 "remoteUser": "node"
 }
